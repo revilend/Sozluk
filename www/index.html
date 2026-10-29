@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TurkUz DilKo'prik</title>
+<style>
+:root{
+  --bg:#0b1020;--bg2:#131a2e;--fg:#e8ecf8;--muted:#8a93b8;--acc:#6ee7b7;--acc2:#38bdf8;
+  --warn:#fbbf24;--err:#f87171;--card:#171f36;--line:#24304f;--chip:#1e2947;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:linear-gradient(160deg,var(--bg),var(--bg2));color:var(--fg);min-height:100vh}
+header{padding:18px 20px 6px;text-align:center}
+header h1{margin:0;font-size:clamp(20px,4vw,30px);letter-spacing:.5px;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+header p{margin:6px 0 14px;color:var(--muted);font-size:13px}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:0 10px}
+nav button{background:var(--chip);color:var(--fg);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;cursor:pointer;transition:.2s}
+nav button.active{background:linear-gradient(90deg,rgba(110,231,183,.18),rgba(56,189,248,.18));border-color:var(--acc2);color:var(--acc)}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 90px}
+section.tab{display:none}
+section.tab.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+input[type=text],textarea,select{width:100%;background:#0e1526;border:1px solid var(--line);color:var(--fg);border-radius:12px;padding:12px 14px;font-size:15px;outline:none}
+input[type=text]:focus,textarea:focus{border-color:var(--acc2)}
+button.btn{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#081020;border:none;border-radius:12px;padding:11px 20px;font-size:15px;font-weight:600;cursor:pointer;transition:.2s}
+button.btn:hover{filter:brightness(1.1)}
+button.ghost{background:transparent;border:1px solid var(--line);color:var(--fg);border-radius:12px;padding:10px 16px;cursor:pointer}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-block;background:var(--chip);border:1px solid var(--line);color:var(--acc);border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+.warn{background:rgba(251,191,36,.12);border:1px solid var(--warn);color:var(--warn);border-radius:12px;padding:10px 14px;font-size:13px;margin-top:10px}
+.err{background:rgba(248,113,113,.1);border:1px solid var(--err);color:var(--err);border-radius:12px;padding:10px 14px;font-size:13px;margin-top:10px}
+.entry{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.entry .tr{font-weight:700;font-size:16px}
+.entry .uz{color:var(--acc)}
+.entry .pos{background:var(--chip);color:var(--muted);border-radius:8px;padding:1px 8px;font-size:11px;margin-left:8px}
+.entry small{color:var(--muted);display:block;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
+th{color:var(--muted);font-weight:600}
+.morph-chain{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.morph-chip{background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:4px 10px;font-size:13px}
+.morph-chip b{color:var(--acc2)}
+.morph-chip span{color:var(--muted)}
+#pos-filter{max-width:200px;margin-top:8px}
+form.search{display:flex;gap:10px}
+.stats{color:var(--muted);font-size:13px;margin-top:10px}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 10px 40px}
+h2{font-size:18px;margin:0 0 12px}
+h3{font-size:15px;margin:16px 0 8px;color:var(--acc)}
+</style>
+</head>
+<body>
+<header>
+  <h1>TurkUz DilKo'prik</h1>
+  <p>Turkcha ↔ O'zbekcha offline sozluk, tarjima, morfologik tahlil va falsarialma (MyMemory) tarjima</p>
+  <nav>
+    <button data-tab="tab-sozluk" class="active">Sözlük</button>
+    <button data-tab="tab-tarjima">Tarjima</button>
+    <button data-tab="tab-morfologiya">Morfologik Tahlil</button>
+    <button data-tab="tab-false">Yolg'on Do'stlar</button>
+    <button data-tab="tab-idiom">Idiomalar</button>
+    <button data-tab="tab-keng">Kengaytirish</button>
+  </nav>
+</header>
+<main>
+  <section id="tab-sozluk" class="tab active">
+    <div class="card">
+      <form id="search-form" class="search">
+        <input type="text" id="search-input" placeholder="Turkish yoki o'zbekcha so'z yozing...">
+        <button class="btn" type="submit">Qidirish</button>
+      </form>
+      <select id="pos-filter">
+        <option value="">Hammasi</option>
+        <option value="aot">Ot (aot)</option>
+        <option value="fel">Fe'l (fel)</option>
+        <option value="sifat">Sifat</option>
+        <option value="ravish">Ravish</option>
+        <option value="suzlashuv">So'zlashuv</option>
+        <option value="biznes">Biznes/Huquq</option>
+        <option value="tibbiyot">Tibbiyot</option>
+        <option value="texno">IT/Texnologiya</option>
+      </select>
+      <div class="stats" id="sofar-stats"></div>
+      <div id="search-results" style="margin-top:14px"></div>
+    </div>
+  </section>
+  <section id="tab-tarjima" class="tab">
+    <div class="card">
+      <textarea id="src-text" rows="4" placeholder="Turccha or Uzbekcha gap yoki so'z yozing"></textarea>
+      <div class="row" style="margin-top:10px">
+        <button id="btn-tr-uz" class="btn">Turkchadan Uzbecha</button>
+        <button id="btn-uz-tr" class="ghost">Uzbekchadan Turkcha</button>
+        <label style="margin-left:auto;font-size:13px"><input type="checkbox" id="online-fallback"> Onlayn fallback (MyMemory)</label>
+      </div>
+      <div id="tr-out"></div>
+      <div id="tr-warn"></div>
+    </div>
+  </section>
+  <section id="tab-morfologiya" class="tab">
+    <div class="card">
+      <form id="morph-form">
+        <input type="text" id="morph-input" placeholder="Turkish so'z: kitabı, cela, ali...">
+        <button class="btn" type="submit">Morfologik Tahlil</button>
+      </form>
+      <div id="morph-results" style="margin-top:16px"></div>
+    </div>
+  </section>
+  <section id="tab-false" class="tab">
+    <div class="card">
+      <h2>False Friends Radar (Yolg'on Do'stlar)</h2>
+      <p style="color:var(--muted);font-size:13px">Tovushdosh yoki yozilishda o'xshash, lekin ma'nolari farq qiluvchi so'zlar.</p>
+      <div id="ff-list"></div>
+    </div>
+  </section>
+  <section id="tab-idiom" class="tab">
+    <div class="card">
+      <h2>Idiomalar va Atalar Savollari</h2>
+      <p style="color:var(--muted);font-size:13px">Fräger & para qaydalar. Har bir idioma tabiiy o'zbekcha ekvivalenti bilan.</p>
+      <div id="idiom-list"></div>
+    </div>
+  </section>
+  <section id="tab-keng" class="tab">
+    <div class="card">
+      <h2>Sözlükni kengaytirish (FreeBuffer)</h2>
+      <form id="addform" class="row">
+        <input type="text" id="new-tr" placeholder="Turkish so'z" style="flex:1">
+        <input type="text" id="new-uz" placeholder="O'zbekcha tarjima" style="flex:1">
+        <select id="new-pos" style="max-width:170px">
+          <option value="aot">Ot</option><option value="fel">Fe'l</option><option value="sifat">Sifat</option>
+          <option value="ravish">Ravish</option><option value="suzlashuv">So'zlashuv</option>
+          <option value="biznes">Biznes</option><option value="tibbiyot">Tibbiyot</option><option value="texno">Texno</option>
+        </select>
+        <button class="btn" type="submit">Qo'shish</button>
+        <button class="ghost" type="button" id="btn-import">JSON importla</button>
+        <button class="ghost" type="button" id="btn-export">JSON export</button>
+        <button class="ghost" type="button" id="btn-delete-all">Barcha o'z sonato'g'riydagi orarchy?</button>
+        <input type="file" id="import-file" accept=".json" style="display:none">
+      </form>
+      <div id="custom-list" style="margin-top:16px"></div>
+    </div>
+  </section>
+</main>
+<footer>TurkUz DilKo'prik — Sözlük + Tarjima + Morfologik tahlil (FreeBuffer offline)</footer>
+<script>
+"use strict";
+// ============ Inline fallback (Default) — index.html ichda ham ishlaydi ============
+window.DEFAULT_SOZLUK = [
+  ["gelmek","kelmoq","fel"],["gitmek","ketmoq","fel"],["yapmak","qilmoq","fel"],["olmak","bo'lmoq","fel"],
+  ["vermek","bermoq","fel"],["görmek","ko'rmoq","fel"],["göstermek","ko'rsatmoq","fel"],["almak","olmoq","fel"],
+  ["söylemek","aytmoq","fel"],["konuşmak","gaplashmoq","fel"],["çalışmak","ishlamoq","fel"],["okumak","o'qimoq","fel"],
+  ["ev","uy","aot"],["kapı","eshik","aot"],["pencere","deraza","aot"],["oda","xona","aot"],
+  ["kitap","kitob","aot"],["kalem","qalam","aot"],["defter","daftar","aot"],["masa","stol","aot"],
+  ["sandalye","stul","aot"],["çay","choy","aot"],["kahve","qahva","aot"],["ekmek","non","aot"],
+  ["anne","ona","aot"],["baba","ota","aot"],["abi","aka","aot"],["abla","opa","aot"],
+  ["insan","odam","aot"],["arkadaş","do'st","aot"],["aile","oila","aot"],["baş","bosh","aot"],
+  ["göz","ko'z","aot"],["kalp","yurak","aot"],["el","qo'l","aot"],["ayak","oyoq","aot"],
+  ["su","suv","aot"],["ateş","olov","aot"],["hava","havo","aot"],["yomg'ir","yomg'ir","aot"],
+  ["güzel","chiroyli","sifat"],["büyük","katta","sifat"],["küçük","kichik","sifat"],["temiz","toza","sifat"],
+  ["kirli","iflos","sifat"],["iyi","yaxshi","sifat"],["kötü","yomon","sifat"],["hızlı","tez","sifat"],
+  ["hemen","darhol","ravish"],["çok","juda","ravish"],["az","kam","ravish"],["bugün","bugun","aot"],
+  ["Merhaba","Assalomu alaykum","suzlashuv"],["Teşekkürler","Rahmat","suzlashuv"],["Adınız ne","Ismingiz nima","suzlashuv"]
+];
+window.DEFAULT_IDIOMS = [
+  {tr:"gözden düşmek",uz:"e'tibordan qolmoq",exTr:"O artık gözden düştü.",exUz:"U endi e'tibordan qoldi."},
+  {tr:"etekleri zil çalmak",uz:"og'zi qulog'i bilan aytib bo'lmas bo'ldi",exTr:"Xabar etekleri zil çaldı.",exUz:"Xabar og'zi qulog'iga yetib qoldi."},
+  {tr:"can kulağıyla dinlemek",uz:"jon qulog'i bilan tinglamoq",exTr:"Onu can kulağıyla dinledim.",exUz:"Men uni jon qulog'i bilan tingladim."}
+];
+window.DEFAULT_FALSE = [
+  {tr:"bardak",uz:"stakan",notUz:"tartibsizlik",note:"bardak = stakan"},
+  {tr:"tabak",uz:"likopcha",notUz:"tamaki",note:"tabak = likopcha"},
+  {tr:"koltuk",uz:"kreslo",notUz:"qo'ltiq",note:"koltuk = kreslo"},
+  {tr:"konuşmak",uz:"gaplashmoq",notUz:"qo'nmoq",note:"konuşmak = gaplashmoq"},
+  {tr:"hemen",uz:"darhol",notUz:"hamma",note:"hemen = darhol"}
+];
+// ============ FreeBuffer cache (IndexedDB → localStorage fallback) ============
+window.FREE_BUFFER = (() => {
+  let db = null;
+  const LS_KEY = 'FreeBuffer.v1';
+  function open(){
+    return new Promise(res=>{
+      if(!('indexedDB' in window)) return res(null);
+      const req = indexedDB.open('FreeBuffer',1);
+      req.onupgradeneeded = e=>{ e.target.result.createObjectStore('words',{keyPath:'id'}); };
+      req.onsuccess = e=>{ db=e.target.result; res(db); };
+      req.onerror = ()=> res(null);
+    });
+  }
+  async function getWords(){
+    const d = await open();
+    if(d) return new Promise(res=>{
+      const tx=d.transaction('words','readonly'), st=tx.objectStore('words'), rq=st.getAll();
+      rq.onsuccess=()=>res(rq.result); rq.onerror=()=>res(null);
+    });
+    try{ return JSON.parse(localStorage.getItem(LS_KEY)||'null'); }catch{ return null; }
+  }
+  async function saveWords(words){
+    const d = await open();
+    const clean = words.map(w=>({id:`${w.tr}|${w.pos}`,tr:w.tr,uz:w.uz,pos:w.pos}));
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(clean)); }catch{}
+    if(!d) return;
+    const tx=d.transaction('words','readwrite'), st=tx.objectStore('words');
+    st.clear().onsuccess=()=>clean.forEach(w=>st.add(w));
+  }
+  return { getWords, saveWords };
+})();
+// ============ State & data loading ============
+let allSozluk=(window.DEFAULT_SOZLUK||[]).map(([tr,uz,pos])=>({tr,uz,pos,src:'inline'}));
+let allIdioms=(window.DEFAULT_IDIOMS||[]).map(e=>({...e,src:'inline'}));
+let allFalse=(window.DEFAULT_FALSE||[]).map(e=>({...e,src:'inline'}));
+window.addEventListener('DOMContentLoaded', init2);
+function init2(){ renderInit(); }
+</script>
+<script src="app.js"></script>
+</body>
+</html>

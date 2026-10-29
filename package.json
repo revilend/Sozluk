@@ -1,0 +1,23 @@
+{
+  "name": "turkuz-dilkoprik",
+  "version": "1.0.0",
+  "displayName": "TurkUz DilKo'prik",
+  "description": "Turkcha–O'zbekcha pivot-free morfologik turjima va offline sozluk (sözlük)",
+  "main": "index.js",
+  "keywords": ["turkish", "uzbek", "sozluk", "dictionary", "capacitor", "offline"],
+  "author": "revilend",
+  "license": "MIT",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs",
+    "sync:www": "node scripts/sync-www.mjs",
+    "cap:sync": "npm run sync:www && cap sync android",
+    "android": "cap open android"
+  },
+  "dependencies": {
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/android": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}

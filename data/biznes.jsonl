@@ -1,0 +1,50 @@
+{"tr":"işletme","uz":"korxona","pos":"biznes"}
+{"tr":"şirket","uz":"shirkat","pos":"biznes"}
+{"tr":"müşteri","uz":"mijoz","pos":"biznes"}
+{"tr":"satıcı","uz":"sotuvchi","pos":"biznes"}
+{"tr":"müdür","uz":"rahbar","pos":"biznes"}
+{"tr":"şef","uz":"shef","pos":"biznes"}
+{"tr":"işçi","uz":"ishchi","pos":"biznes"}
+{"tr":"muhasebe","uz":"buxgalteriya","pos":"biznes"}
+{"tr":"muhasebeci","uz":"buxgalter","pos":"biznes"}
+{"tr":"gider","uz":"xarajat","pos":"biznes"}
+{"tr":"gelir","uz":"daromad","pos":"biznes"}
+{"tr":"zarar","uz":"zarar","pos":"biznes"}
+{"tr":"borç","uz":"qarz","pos":"biznes"}
+{"tr":"sermaye","uz":"sarmoya","pos":"biznes"}
+{"tr":"yatırım","uz":"investitsiya","pos":"biznes"}
+{"tr":"anlaşma","uz":"kelishuv","pos":"biznes"}
+{"tr":"sözleşme","uz":"shartnoma","pos":"biznes"}
+{"tr":"rapor","uz":"hisobot","pos":"biznes"}
+{"tr":"toplantı","uz":"yig'ilish","pos":"biznes"}
+{"tr":"imza","uz":"imzo","pos":"biznes"}
+{"tr":"öneri","uz":"taklif","pos":"biznes"}
+{"tr":"araştırma","uz":"tadqiqot","pos":"biznes"}
+{"tr":"pazarlama","uz":"marketing","pos":"biznes"}
+{"tr":"reklam","uz":"reklama","pos":"biznes"}
+{"tr":"stok","uz":"zaxira","pos":"biznes"}
+{"tr":"hizmet","uz":"xizmat","pos":"biznes"}
+{"tr":"ürün","uz":"mahsulot","pos":"biznes"}
+{"tr":"maliye","uz":"moliya","pos":"biznes"}
+{"tr":"vergi","uz":"soliq","pos":"biznes"}
+{"tr":"vergi beyannamesi","uz":"soliq deklaratsiyasi","pos":"biznes"}
+{"tr":"piyasa","uz":"bozor","pos":"biznes"}
+{"tr":"hisse","uz":"ulush","pos":"biznes"}
+{"tr":"teklif","uz":"taklif","pos":"biznes"}
+{"tr":"aylık","uz":"oylik","pos":"biznes"}
+{"tr":"maaş","uz":"maosh","pos":"biznes"}
+{"tr":"emeklilik","uz":"pensiya","pos":"biznes"}
+{"tr":"iş kanunu","uz":"mehnat kodeksi","pos":"biznes"}
+{"tr":"fatura","uz":"hisob-faktura","pos":"biznes"}
+{"tr":"kasa","uz":"kassa","pos":"biznes"}
+{"tr":"kredi","uz":"kredit","pos":"biznes"}
+{"tr":"protokol","uz":"protokol","pos":"biznes"}
+{"tr":"şart","uz":"shart","pos":"biznes"}
+{"tr":"müşteri memnuniyeti","uz":"mijoz mamnunligi","pos":"biznes"}
+{"tr":"izin","uz":"ruhsat","pos":"biznes"}
+{"tr":"imtiyaz","uz":"imtiyoz","pos":"biznes"}
+{"tr":"müsabaka","uz":"musobaqa","pos":"biznes"}
+{"tr":"kontrat","uz":"shartnoma","pos":"biznes"}
+{"tr":"mükellef","uz":"soliq to'lovchi","pos":"biznes"}
+{"tr":"banka","uz":"bank","pos":"biznes"}
+{"tr":"kambiyo","uz":"valyuta","pos":"biznes"}
