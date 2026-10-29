@@ -6,6 +6,8 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const lower=s=>String(s||'').toLowerCase();
 const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s;
 TURKUZ.el=el;TURKUZ.esc=esc;TURKUZ.lower=lower;TURKUZ.cap=cap;
+// Global ko'rinishda ham chiqaramiz: boshqa modullarda bare lower()/esc() ishlatilgan
+window.lower=lower;window.esc=esc;window.cap=cap;window.el=el;
 })();
 // ==================== Turkiy morfologiya: qo'shimchalar jadvali ====================
 TURKUZ.MORPH = (function(){
