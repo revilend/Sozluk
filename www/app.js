@@ -215,19 +215,38 @@ function renderInit(){
   });
   document.getElementById('btn-tr-uz').addEventListener('click',async()=>{
     const t=document.getElementById('src-text').value.trim(); if(!t) return;
+    const out=document.getElementById('tr-out');
     const r=TURKUZ.translate.translateTrToUz(t);
-    let h=`<div class="entry" style="margin-top:14px"><div class="uz">${TURKUZ.esc(r.uz)}</div></div>`;
-    document.getElementById('tr-out').innerHTML=h;
+    const localHtml=`<div class="entry small-block" style="margin-top:10px"><small>Lokal tahlil:</small><div class="uz">${TURKUZ.esc(r.uz)}</div></div>`;
     document.getElementById('tr-warn').innerHTML=(r.warnings||[]).map(w=>`<div class="warn">${TURKUZ.esc(w)}</div>`).join('');
+    // Onlayn tarjima asosiy (doim sinaymiz). Chexboks o'chirilsa — faqat lokal.
     const cb=document.getElementById('online-fallback');
-    if(cb&&cb.checked){ const on=await TURKUZ.translate.onlineFallback(t,'tr2uz');
-      if(on){ document.getElementById('tr-out').innerHTML+=`<div class="card" style="margin-top:10px"><b>Onlayn (MyMemory):</b> ${TURKUZ.esc(on)}</div>`; }
+    if(!cb||cb.checked){
+      out.innerHTML='<div class="entry" style="margin-top:14px"><small>Onlayn tarjima (MyMemory):</small></div><div class="loading">Yuklanmoqda…</div>'+localHtml;
+      const on=await TURKUZ.translate.onlineFallback(t,'tr2uz');
+      if(on){
+        const warn=TURKUZ.translate.falseFriendCheck? TURKUZ.translate.falseFriendCheck(on):[];
+        out.innerHTML=`<div class="entry" style="margin-top:14px"><small>Onlayn tarjima (MyMemory):</small><div class="uz">${TURKUZ.esc(on)}</div></div>`+(Array.isArray(warn)&&warn.length? warn.map(w=>`<div class="warn">${TURKUZ.esc(w)}</div>`).join(''): [])+localHtml;
+      } else {
+        // Onlayn ishlamadi: lokal natijaga o'tamiz
+        out.innerHTML=`<div class="entry" style="margin-top:14px"><small>Oflayn (lokal morfologik tahlil):</small><div class="uz">${TURKUZ.esc(r.uz)}</div></div>`;
+      }
+    } else {
+      out.innerHTML=`<div class="entry" style="margin-top:14px"><small>Oflayn (lokal morfologik tahlil):</small><div class="uz">${TURKUZ.esc(r.uz)}</div></div>`;
     }
   });
-  document.getElementById('btn-uz-tr').addEventListener('click',()=>{
+  document.getElementById('btn-uz-tr').addEventListener('click',async()=>{
     const t=document.getElementById('src-text').value.trim(); if(!t) return;
+    const out=document.getElementById('tr-out');
     const r=TURKUZ.translate.translateUzToTr(t);
-    document.getElementById('tr-out').innerHTML=`<div class="entry" style="margin-top:14px"><div class="tr">${TURKUZ.esc(r.tr)}</div></div>`;
+    const cb=document.getElementById('online-fallback');
+    if(!cb||cb.checked){
+      out.innerHTML='<div class="entry" style="margin-top:14px"><small>Onlayn tarjima (MyMemory):</small></div><div class="loading">Yuklanmoqda…</div>';
+      const on=await TURKUZ.translate.onlineFallback(t,'uz2tr');
+      out.innerHTML=`<div class="entry" style="margin-top:14px"><small>${on?'Onlayn tarjima (MyMemory):':'Oflayn (lokal tahlil):'}</small><div class="tr">${TURKUZ.esc(on||r.tr)}</div></div>`;
+    } else {
+      out.innerHTML=`<div class="entry" style="margin-top:14px"><small>Oflayn (lokal tahlil):</small><div class="tr">${TURKUZ.esc(r.tr)}</div></div>`;
+    }
   });
   document.getElementById('addform').addEventListener('submit',async ev=>{
     ev.preventDefault();

@@ -48,6 +48,7 @@ form.search{display:flex;gap:10px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 10px 40px}
 h2{font-size:18px;margin:0 0 12px}
 h3{font-size:15px;margin:16px 0 8px;color:var(--acc)}
+.loading{color:var(--muted);font-style:italic;margin:10px 0}
 </style>
 </head>
 <body>
@@ -91,7 +92,7 @@ h3{font-size:15px;margin:16px 0 8px;color:var(--acc)}
       <div class="row" style="margin-top:10px">
         <button id="btn-tr-uz" class="btn">Turkchadan Uzbecha</button>
         <button id="btn-uz-tr" class="ghost">Uzbekchadan Turkcha</button>
-        <label style="margin-left:auto;font-size:13px"><input type="checkbox" id="online-fallback"> Onlayn fallback (MyMemory)</label>
+        <label style="margin-left:auto;font-size:13px"><input type="checkbox" id="online-fallback" checked> Onlayn tarjima (MyMemory) — to'g'ri natija uchun</label>
       </div>
       <div id="tr-out"></div>
       <div id="tr-warn"></div>
