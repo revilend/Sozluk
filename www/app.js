@@ -260,8 +260,10 @@ function renderInit(){
   });
   document.getElementById('btn-delete-all').addEventListener('click',async()=>{
     if(!confirm('Barcha shaxsiy so\'zlarni o\'chirilsinmi?')) return;
+    allSozluk=allSozluk.filter(e=>e.src!=='custom');
     await window.FREE_BUFFER.saveWords([]);
-    return;
+    renderCustom(); renderSearch();
+    alert('Barcha shaxsiy so\'zlar o\'chirildi');
   });
 }
 // ==================== MA'LUMOT BAZASINI YUKLASH (sozluk_data.json) ====================
