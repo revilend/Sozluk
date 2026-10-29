@@ -3,8 +3,8 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 const dir = new URL('../data/', import.meta.url).pathname;
-const trRe = /^[a-zA-ZçğıöşüÇĞİÖŞÜ' .-]+$/;
-const uzRe = /^[a-zA-Z' .-]+$/;
+const trRe = /^[a-zA-ZçğıöşüÇĞİÖŞÜîâİÂÎ' .,!?-]{1,45}$/;
+const uzRe = /^[a-zA-Z' .,!?-]{1,60}$/;
 for (const f of readdirSync(dir)) {
   if (!f.endsWith('.jsonl')) continue;
   if (f.startsWith('idiom') || f.startsWith('falsefriends')) continue; // maqol/yalg'onchida exTr/exUz kerak, alohida tekshiriladi

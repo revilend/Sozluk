@@ -6,7 +6,6 @@
 {"tr":"şef","uz":"shef","pos":"biznes"}
 {"tr":"işçi","uz":"ishchi","pos":"biznes"}
 {"tr":"muhasebe","uz":"buxgalteriya","pos":"biznes"}
-{"tr":"muhasebeci","uz":"buxgalter","pos":"biznes"}
 {"tr":"gider","uz":"xarajat","pos":"biznes"}
 {"tr":"gelir","uz":"daromad","pos":"biznes"}
 {"tr":"zarar","uz":"zarar","pos":"biznes"}
@@ -48,3 +47,25 @@
 {"tr":"mükellef","uz":"soliq to'lovchi","pos":"biznes"}
 {"tr":"banka","uz":"bank","pos":"biznes"}
 {"tr":"kambiyo","uz":"valyuta","pos":"biznes"}
+{"tr":"ödeme","uz":"to'lov","pos":"biznes"}
+{"tr":"faiz","uz":"foiz","pos":"biznes"}
+{"tr":"pazarlık","uz":"savdo-sotiqlar","pos":"biznes"}
+{"tr":"kıdem tazminatı","uz":"ish haqi tovon","pos":"biznes"}
+{"tr":"taşeron","uz":"pudratchi","pos":"biznes"}
+{"tr":"hisrap belgisi","uz":"hujjat","pos":"biznes"}
+{"tr":"arz","uz":"so'rov","pos":"biznes"}
+{"tr":"noter","uz":"notarius","pos":"biznes"}
+{"tr":"mahkeme","uz":"sud","pos":"biznes"}
+{"tr":"hukuki","uz":"huquqiy","pos":"biznes"}
+{"tr":"dava","uz":"da'vo","pos":"biznes"}
+{"tr":"miras","uz":"meros","pos":"biznes"}
+{"tr":"müteahhit","uz":"qurilish pudratchisi","pos":"biznes"}
+{"tr":"görevli","uz":"xodim","pos":"biznes"}
+{"tr":"patron","uz":"boss","pos":"biznes"}
+{"tr":"elçilik","uz":"elchixona","pos":"biznes"}
+{"tr":"konsolosluk","uz":"konsulixona","pos":"biznes"}
+{"tr":"iş başvurusu","uz":"ishga ariza","pos":"biznes"}
+{"tr":"mülakat","uz":"ish suhbati","pos":"biznes"}
+{"tr":"istifa","uz":"ishdan bo'shash","pos":"biznes"}
+{"tr":"muhasebeci","uz":"buxgalter","pos":"biznes"}
+{"tr":"tasarruf","uz":"tejamkorlik","pos":"biznes"}

@@ -22,3 +22,20 @@
 {"tr":"ambulans","uz":"tezkor yordam","pos":"tibbiyot"}
 {"tr":"sağlık sigortası","uz":"sag'liq sug'urta","pos":"tibbiyot"}
 {"tr":"tıbbi kayıt","uz":"tibbiy yozuv","pos":"tibbiyot"}
+{"tr":"baş dönmesi","uz":"bosh aylanish","pos":"tibbiyot"}
+{"tr":"grip","uz":"gripp","pos":"tibbiyot"}
+{"tr":"bronşit","uz":"bronxit","pos":"tibbiyot"}
+{"tr":"astım","uz":"astma","pos":"tibbiyot"}
+{"tr":"diyabet","uz":"diabet","pos":"tibbiyot"}
+{"tr":"tansiyon","uz":"qon bosimi","pos":"tibbiyot"}
+{"tr":"kalp krizi","uz":"yurak xuruji","pos":"tibbiyot"}
+{"tr":"şişlik","uz":"shish","pos":"tibbiyot"}
+{"tr":"döküntü","uz":"toshma","pos":"tibbiyot"}
+{"tr":"yanık","uz":"yonish","pos":"tibbiyot"}
+{"tr":"kesik","uz":"kesilish","pos":"tibbiyot"}
+{"tr":"kırık","uz":"sinoq","pos":"tibbiyot"}
+{"tr":"sargı","uz":"bog'lov","pos":"tibbiyot"}
+{"tr":"ilaç dozu","uz":"dori dozasi","pos":"tibbiyot"}
+{"tr":"doğumhane","uz":"tug'ruqxona","pos":"tibbiyot"}
+{"tr":"diş hekimi","uz":"stomatolog","pos":"tibbiyot"}
+{"tr":"tıbbaş","uz":"shifokor yordamchisi","pos":"tibbiyot"}
