@@ -60,7 +60,7 @@
 {"tr":"uyandırmak","uz":"uyg'otmoq","pos":"fel"}
 {"tr":"sezmek","uz":"sezmoq","pos":"fel"}
 {"tr":"tahmin etmek","uz":"taxmin qilmoq","pos":"fel"}
-{"tr":"toplamak","uz":"to'plamoq","pos":"fel"}
+{"tr":"toplamak","uz":"yig'moq","pos":"fel"}
 {"tr":"bozmak","uz":"buzmoq","pos":"fel"}
 {"tr":"şarkı söylemek","uz":"qo'shiq aytmoq","pos":"fel"}
 {"tr":"koymak","uz":"qo'ymoq","pos":"fel"}
@@ -157,3 +157,41 @@
 {"tr":"hisaplamak","uz":"hisoblamoq","pos":"fel"}
 {"tr":"itirmek","uz":"yo'qotmoq","pos":"fel"}
 {"tr":"kaldırmak","uz":"ko'tarmoq","pos":"fel"}
+{"tr":"pişirmek","uz":"pishirmoq","pos":"fel"}
+{"tr":"qızarmak","uz":"qizarmoq","pos":"fel"}
+{"tr":"hamur yoğurmak","uz":"xamir yigirmoq","pos":"fel"}
+{"tr":"doğramak","uz":"to'g'ramoq","pos":"fel"}
+{"tr":"soymak","uz":"po'stini olmoq","pos":"fel"}
+{"tr":"gezmek","uz":"sayr qilmoq","pos":"fel"}
+{"tr":"bakmak","uz":"boqmoq","pos":"fel"}
+{"tr":"bakım yapmak","uz":"parvarish qilmoq","pos":"fel"}
+{"tr":"silmek","uz":"o'chirmoq","pos":"fel"}
+{"tr":"çöpe atmak","uz":"chiqindiga tashlamoq","pos":"fel"}
+{"tr":"sıkışmak","uz":"tishib qolmoq","pos":"fel"}
+{"tr":"nefes almak","uz":"nafas olmoq","pos":"fel"}
+{"tr":"yemek yemek","uz":"ovqat yemoq","pos":"fel"}
+{"tr":"su içmek","uz":"suv ichmoq","pos":"fel"}
+{"tr":"beğenmek","uz":"ma'qul ko'rmoq","pos":"fel"}
+{"tr":"sevinmek","uz":"sevinmoq","pos":"fel"}
+{"tr":"tadmak","uz":"tatmoq","pos":"fel"}
+{"tr":"koklamak","uz":"hidlamoq","pos":"fel"}
+{"tr":"dokunmak","uz":"tegmoq","pos":"fel"}
+{"tr":"görünmek","uz":"ko'rinmoq","pos":"fel"}
+{"tr":"gizlenmek","uz":"yashirmoq","pos":"fel"}
+{"tr":"başarısız olmak","uz":"muvaffaqiyatsiz bo'lmoq","pos":"fel"}
+{"tr":"kurtarmak","uz":"qutqarmoq","pos":"fel"}
+{"tr":"zarar vermek","uz":"zarar bermoq","pos":"fel"}
+{"tr":"fayda sağlamak","uz":"fayda keltirmoq","pos":"fel"}
+{"tr":"çalışmaya başlamak","uz":"ish boshlamoq","pos":"fel"}
+{"tr":"belgelemek","uz":"hujjatlashtirmoq","pos":"fel"}
+{"tr":"çalmak","uz":"o'g'irlamoq","pos":"fel"}
+{"tr":"çizmek","uz":"chizmoq","pos":"fel"}
+{"tr":"koşuya başlamak","uz":"yugurishni boshlamoq","pos":"fel"}
+{"tr":"zıplamak","uz":"sakmoq","pos":"fel"}
+{"tr":"tokat atmak","uz":"chapat urmoq","pos":"fel"}
+{"tr":"yalvarmak","uz":"yolvirmoq","pos":"fel"}
+{"tr":"ödül vermek","uz":"mukofot bermoq","pos":"fel"}
+{"tr":"ceza vermek","uz":"jazo bermoq","pos":"fel"}
+{"tr":"arastı rmak","uz":"tekshirmoq","pos":"fel"}
+{"tr":"sınav yapmak","uz":"imtihon qilmoq","pos":"fel"}
+{"tr":"boyanmak","uz":"bo'yalmoq","pos":"fel"}
