@@ -39,3 +39,10 @@
 {"tr":"doğumhane","uz":"tug'ruqxona","pos":"tibbiyot"}
 {"tr":"diş hekimi","uz":"stomatolog","pos":"tibbiyot"}
 {"tr":"tıbbaş","uz":"shifokor yordamchisi","pos":"tibbiyot"}
+{"tr":"hastane","uz":"kasalxona","pos":"tibbiyot"}
+{"tr":"recete","uz":"retsept","pos":"tibbiyot"}
+{"tr":"randevu","uz":"navbat","pos":"tibbiyot"}
+{"tr":"tehlikeli","uz":"xavfli","pos":"tibbiyot"}
+{"tr":"soğuk","uz":"sovuq hayot","pos":"tibbiyot"}
+{"tr":"antibiotik","uz":"antibiotik","pos":"tibbiyot"}
+{"tr":"nabız","uz":"nabz","pos":"tibbiyot"}

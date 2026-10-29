@@ -48,3 +48,25 @@
 {"tr":"fayl","uz":"fayl","pos":"texno"}
 {"tr":"servis","uz":"xizmat","pos":"texno"}
 {"tr":"kaydetmek","uz":"saqlamoq","pos":"texno"}
+{"tr":"veritabanı","uz":"ma'lumotlar ombori","pos":"texno"}
+{"tr":"mesaj","uz":"xabar","pos":"texno"}
+{"tr":"kısa mesaj","uz":"qisqa xabar","pos":"texno"}
+{"tr":"circulation","uz":"aralash","pos":"texno"}
+{"tr":"kablo","uz":"sim","pos":"texno"}
+{"tr":"signal","uz":"signal","pos":"texno"}
+{"tr":"şarj etmek","uz":"quvvatlash","pos":"texno"}
+{"tr":"priz","uz":"elektr rozetki","pos":"texno"}
+{"tr":"geniş bant","uz":"keng polosa","pos":"texno"}
+{"tr":"objektif","uz":"linsa","pos":"texno"}
+{"tr":"basmak","uz":"chop etmoq","pos":"texno"}
+{"tr":"tuş","uz":"tug'","pos":"texno"}
+{"tr":"işletim sistemi","uz":"operatsion sistema","pos":"texno"}
+{"tr":"erişim","uz":"kirish","pos":"texno"}
+{"tr":"şifre değiştirme","uz":"parolni o'zgartirish","pos":"texno"}
+{"tr":"yedekleme","uz":"zaxira nusxa","pos":"texno"}
+{"tr":"güncelleştirme","uz":"yangilash","pos":"texno"}
+{"tr":"arızalı","uz":"nosoz","pos":"texno"}
+{"tr":"düzeltme","uz":"tuzatish","pos":"texno"}
+{"tr":"taşıma","uz":"sudrab tashlash","pos":"texno"}
+{"tr":"sönük","uz":"o'chgan","pos":"texno"}
+{"tr":"hızlı internet","uz":"tez internet","pos":"texno"}

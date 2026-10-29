@@ -69,3 +69,31 @@
 {"tr":"istifa","uz":"ishdan bo'shash","pos":"biznes"}
 {"tr":"muhasebeci","uz":"buxgalter","pos":"biznes"}
 {"tr":"tasarruf","uz":"tejamkorlik","pos":"biznes"}
+{"tr":"sendika","uz":"kasaba uyushmasi","pos":"biznes"}
+{"tr":"akreditif","uz":"akkreditiv","pos":"biznes"}
+{"tr":"borsa","uz":"birja","pos":"biznes"}
+{"tr":"hisse senedi","uz":"aksiya","pos":"biznes"}
+{"tr":"temettü","uz":"dividend","pos":"biznes"}
+{"tr":"tasdik","uz":"tasdiqlash","pos":"biznes"}
+{"tr":"isgrit","uz":"buyurtma","pos":"biznes"}
+{"tr":"ithalat","uz":"import","pos":"biznes"}
+{"tr":"ihracat","uz":"eksport","pos":"biznes"}
+{"tr":"lio","uz":"yuk","pos":"biznes"}
+{"tr":"gemi","uz":"kema","pos":"biznes"}
+{"tr":"taşıyıcı","uz":"tashuvchi","pos":"biznes"}
+{"tr":"kilogram","uz":"kilogramm","pos":"biznes"}
+{"tr":"ton","uz":"tonna","pos":"biznes"}
+{"tr":"muhasara","uz":"hisob-kitob","pos":"biznes"}
+{"tr":"komisyon","uz":"komisiya","pos":"biznes"}
+{"tr":"kdv","uz":"qo'shimcha soliq","pos":"biznes"}
+{"tr":"bank hesabı","uz":"bank hisobi","pos":"biznes"}
+{"tr":"hesap","uz":"hisob","pos":"biznes"}
+{"tr":"hesap numarası","uz":"hisob raqami","pos":"biznes"}
+{"tr":"para birimi","uz":"pul birlik","pos":"biznes"}
+{"tr":"döviz","uz":"valyuta","pos":"biznes"}
+{"tr":"kur","uz":"kurs","pos":"biznes"}
+{"tr":"gıda","uz":"oziq-ovqat","pos":"biznes"}
+{"tr":"hukuki müşavir","uz":"yurist maslahatchi","pos":"biznes"}
+{"tr":"mühür","uz":"muhur","pos":"biznes"}
+{"tr":"kassir","uz":"kassir","pos":"biznes"}
+{"tr":"taşınmaz","uz":"ko'chmas mulk","pos":"biznes"}
